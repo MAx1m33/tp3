@@ -4,18 +4,11 @@ import random as rd
 
 class jeu:
 
-    def __init__(self, m, n):
-        self.k = rd.randint(0, m)
-        print(self.k)
-        self.n = n
-        print(self.k)
-
-
     # q14: 2eme methode pour n:
-    # def __init__(self,m):
-    #     self.k = rd.randint(0,m)
-    #     self.n = int(input("entrez le nombre maximal d'essais:"))
-    #     print(self.k)
+    def __init__(self,m):
+        self.k = rd.randint(0,m)
+        self.n = int(input("entrez le nombre maximal d'essais:"))
+        print(self.k)
 
 
     def test(self, i):
@@ -46,6 +39,6 @@ class jeu:
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-j = jeu(100, 6)
+j = jeu(100)
 k = jeu.jouer(j)
 
